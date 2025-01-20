@@ -1,3 +1,19 @@
 ---
 title: "Assignments and Active Participation"
 ---
+
+1.  We meet on a weekly basis for two and a half hours (synchronic mode) which sums up to c. 30 hours over the course of the semester (equivalent to 1 credit point). See [schedule](/about.qmd) for further information on the meetings.
+
+2.  We will build a shared glossary of terms and concepts that are important in Ancient Language Processing. Students are going to work in groups of two on the terms assigned to them, providing a short definition and links to more extensive explanations. Writing will be done on the GitHub collaborative platform and will be accessible through the course homepage. (c. 30 hours = 1 credit point)
+
+3.  Students will develop their own projects based on data provided by the instructors or by data that they contribute. The project plan requires (a) a humanistic research question, (b) operationalize it (i.e., develop a workflow to tackle the question computationally) and (c) present a poster describing their data set, methods, analysis, interpretation and results. The structure of the poster will follow a template of a typical computational humanities paper. (c. 120 hours = 4 credit points)
+
+## Assessment
+
+|  |  |  |  |
+|----|----|----|----|
+| **Activity** | **Number** | **Weight (%)/activity** | **Weight (%)** |
+| Participation | 13 | mandatory | 0 |
+| Assignments | 4 | 2 | 30 |
+| Research poster (1,000 words) + code notebooks (github) + 10 min. presentation | 1 | 80 | 70 |
+| Total (%) |  |  | 100 |

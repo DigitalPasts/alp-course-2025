@@ -9,8 +9,6 @@ website:
   navbar:
     logo: digpasts_logo.png
     left:
-      - text: "Homepage"
-        href: index.qmd
       - text: "Course Schedule"  
         href: about.qmd
       - text: "Coursework"
@@ -45,3 +43,5 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    toc-title: "On this page"
+    html-metadata: true

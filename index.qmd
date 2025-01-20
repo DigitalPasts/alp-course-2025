@@ -7,16 +7,16 @@ about:
   image-width: 43em
 ---
 
-## **Short Description**[^1]
+# Short Description[^1]
 
 [^1]: The scatter plot at the top of the page shows relative word frequencies across the seven tablets of Standard Babylonian *Enūma eliš* (Poem of Creation), using t-SNE dimension reduction to represent relative distances between words in 2D vector space (reproduced using [Voyant Tools](https://voyant-tools.org/?analysis=tsne&limit=152&clusters=4&perplexity=9&iterations=1600&label=summary&label=docs&label=terms&corpus=9a028a76bb22320092f109f6a35d5769&view=ScatterPlot), see Sinclair, S. & G. Rockwell. (2023). ScatterPlot. *Voyant Tools*. Retrieved March 21, 2023)
 
 How do we turn an ancient text into data? How do we apply data science techniques to historical, cultural, and linguistic questions? What are the ramifications of such transformations when confronted with classical approaches to ancient texts? The Ancient Language Processing course will focus specifically on how to answer the above questions when working with ancient languages and scripts from the emergence of writing in Mesopotamia and Egypt, to the rest of the world up till 800 CE. This course will introduce students of ancient history, ancient Near Eastern languages, and computer science to the computational processing of ancient texts. They will engage with inscribed artefacts–from dataset pre-processing to computational analysis via text parsing, vector space models (VSMs), statistical approaches, and graph theory.
 
-## **Course Objectives**
+# Course Objectives
 
 Ancient languages contain rich human historical and cultural wealth. So far there has been good advancement in applying language technologies to ancient languages such as Sumerian, Akkadian, Latin, Ancient Greek, and Ancient Chinese, especially in the construction of digital language resources and resources to facilitate automatic analysis. For example, the Universal Dependencies (UD) project has made treebanks available for a series of ancient languages. The objective of this course is to computationally engage with ancient datasets of inscribed artefacts, mostly texts, from data exploration to publication of computational analysis. We will analyze classical studies and consider emerging research questions in the field of ancient Near Eastern studies, in order to address them computationally using ancient language processing.
 
-## **Learning Outcomes**
+# Learning Outcomes
 
 Students will discuss and contrast the shared epigraphical challenges in ancient language processing: such as Latin, non-Latin and non-alphabetic scripts, Right-to-Left, transliteration conventions and fragmentary texts, and in particular, the multilingual framework to represent the morphology, syntax, and semantics, as well as machine translation models. They will perform hands-on digital philology with novel methods, code, and techniques. The main outcome of the course will be a collaborative computational research paper on an ancient dataset.
