@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Ancient Language Processing / Gordin, Mara, and Lincke – colab_intro</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../digpasts_logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Ancient Language Processing / Gordin, Mara, and Lincke</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Homepage</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">Course Schedule</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-coursework" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Coursework</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-coursework">    
+        <li>
+    <a class="dropdown-item" href="../assignments/index.html">
+ <span class="dropdown-text">Workload and Assessment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../assignments/scheduale.html">
+ <span class="dropdown-text">Assignment Schedule</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html">
+ <span class="menu-text">Materials and Texts</span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-reader-toggle nav-link" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#intro-to-google-colab-and-some-other-tips-and-tricks" id="toc-intro-to-google-colab-and-some-other-tips-and-tricks" class="nav-link active" data-scroll-target="#intro-to-google-colab-and-some-other-tips-and-tricks">Intro to Google Colab (and some other tips and tricks)</a>
+  <ul class="collapse">
+  <li><a href="#lets-get-started" id="toc-lets-get-started" class="nav-link" data-scroll-target="#lets-get-started">Let’s get started!</a></li>
+  <li><a href="#and-off-we-go" id="toc-and-off-we-go" class="nav-link" data-scroll-target="#and-off-we-go">And off we go!</a></li>
+  <li><a href="#your-first-cell" id="toc-your-first-cell" class="nav-link" data-scroll-target="#your-first-cell">Your first cell</a></li>
+  <li><a href="#exercise-make-a-text-cell-with-some-formatting-using-markdown" id="toc-exercise-make-a-text-cell-with-some-formatting-using-markdown" class="nav-link" data-scroll-target="#exercise-make-a-text-cell-with-some-formatting-using-markdown">Exercise: Make a text cell with some formatting using Markdown</a></li>
+  <li><a href="#three-helpful-shortcuts" id="toc-three-helpful-shortcuts" class="nav-link" data-scroll-target="#three-helpful-shortcuts">Three helpful shortcuts</a></li>
+  <li><a href="#code-cells" id="toc-code-cells" class="nav-link" data-scroll-target="#code-cells">Code cells</a></li>
+  <li><a href="#a-bit-more-on-printing-things" id="toc-a-bit-more-on-printing-things" class="nav-link" data-scroll-target="#a-bit-more-on-printing-things">A bit more on printing things</a></li>
+  <li><a href="#errors" id="toc-errors" class="nav-link" data-scroll-target="#errors">Errors</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#exercise-write-some-code-to-print-out-the-variables-weve-just-assigned" id="toc-exercise-write-some-code-to-print-out-the-variables-weve-just-assigned" class="nav-link" data-scroll-target="#exercise-write-some-code-to-print-out-the-variables-weve-just-assigned">Exercise: Write some code to print out the variables we’ve just assigned</a></li>
+  <li><a href="#another-neat-thing-about-notebooks" id="toc-another-neat-thing-about-notebooks" class="nav-link" data-scroll-target="#another-neat-thing-about-notebooks">Another neat thing about notebooks:</a></li>
+  <li><a href="#exercise-write-some-code-and-then-run-it" id="toc-exercise-write-some-code-and-then-run-it" class="nav-link" data-scroll-target="#exercise-write-some-code-and-then-run-it">Exercise: Write some code and then run it</a></li>
+  <li><a href="#keyboard-shortcuts" id="toc-keyboard-shortcuts" class="nav-link" data-scroll-target="#keyboard-shortcuts">Keyboard shortcuts</a></li>
+  <li><a href="#saving-submitting-your-work" id="toc-saving-submitting-your-work" class="nav-link" data-scroll-target="#saving-submitting-your-work">Saving / submitting your work</a></li>
+  <li><a href="#viewing-editing-notebooks-outside-of-colab" id="toc-viewing-editing-notebooks-outside-of-colab" class="nav-link" data-scroll-target="#viewing-editing-notebooks-outside-of-colab">Viewing / editing notebooks outside of Colab</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="intro-to-google-colab-and-some-other-tips-and-tricks" class="level1">
+<h1>Intro to Google Colab (and some other tips and tricks)</h1>
+<p>Google Colab is a cloud-based notebook-style platform for programming in Python (among other languages), which allows you to intersperse executable code with chunks of text like this. It lets you (mostly) avoid the command line, and results in a file that is easy to read and easy to share with others.</p>
+<p>We’ll be using Colab for in-class exercises and for many of the homework assignments.</p>
+<section id="lets-get-started" class="level2">
+<h2 class="anchored" data-anchor-id="lets-get-started">Let’s get started!</h2>
+<p>Colab makes it easy for me to share notebooks with you, and for all of us to install any required libraries on a single platform. (This is a big reason why we’re using Colab in this class). One caveat about working with notebooks on Colab is that they are shared with you in a read-only format.</p>
+<p>To get started, your very first step should always be to choose <code>File &gt; Save a copy in Drive</code> from the menu at the top of the page, and make all future edits/modifications on that copy.</p>
+<p><strong>In general, I recommend naming the file something with your name in it so as to tell it apart from the original.</strong></p>
+<p>NB: If you are an advanced Python user and you’d prefer to use git/GitHub to keep track of your notebooks, I will also maintain a repsitory of class notebooks <a href="https://github.com/laurenfklein/QTM340-Fall22">here</a>.</p>
+</section>
+<section id="and-off-we-go" class="level2">
+<h2 class="anchored" data-anchor-id="and-off-we-go">And off we go!</h2>
+<p>A notebook consists of a number of “cells,” stacked on the page from top to bottom. Cells can have text or code in them.</p>
+<p>You can add a new text cell or a code cell by using the <code>+ Code</code> or <code>+ Text</code> button at the top of the page.</p>
+<p>When you click one or the other of those buttons, it will add a cell right below the cell you have currently selected. If your cell ends up in the wrong place, you can click the up or down arrow over there on the far right of the cell to move it up or down, until you get it to the spot you intended.</p>
+</section>
+<section id="your-first-cell" class="level2">
+<h2 class="anchored" data-anchor-id="your-first-cell">Your first cell</h2>
+<p><strong>Let’s make a text cell!</strong></p>
+<p>To make a new text cell below this one, do this: * Click on this cell to select it. * Click the <code>+ Text</code> button at the top of the page. * Type some stuff and press <code>Shift-Return</code> (or <code>Shift-Enter</code> on some keyboards).</p>
+<p>Colab will “render” the text and display it on the page in rendered format. You can hit <code>Return</code> or <code>Enter</code>, or double-click the cell, to edit its contents again.</p>
+<p>In Colab, you can just use the formatting options at the top of the cell to format the text.</p>
+<p>NB: If you are curious as to why the formatting options insert some special characers into the text, it is because Colab formats text using a language called Markdown. If you want to learn more about Markdown, <a href="http://markdowntutorial.com/">here is a tutorial</a>, although I prefer to just consult a cheat sheet like <a href="https://www.markdownguide.org/cheat-sheet/">this one</a>.</p>
+</section>
+<section id="exercise-make-a-text-cell-with-some-formatting-using-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-make-a-text-cell-with-some-formatting-using-markdown">Exercise: Make a text cell with some formatting using Markdown</h2>
+<p>Here is your first exericse: Insert a new cell just below this one, and us the formattinng palate to make some text <strong>bold</strong>, some text <em>italics</em>, and some:</p>
+<ul>
+<li>text</li>
+<li>in</li>
+<li>a</li>
+<li>list</li>
+</ul>
+<hr>
+</section>
+<section id="three-helpful-shortcuts" class="level2">
+<h2 class="anchored" data-anchor-id="three-helpful-shortcuts">Three helpful shortcuts</h2>
+<p>Instead of pressing <code>Shift-Enter</code>, you can press <code>Alt-Enter</code> (or <code>Option-Return</code> on a Mac) to render the current cell and create a new cell just below. New cells will by default be <code>Code</code> cells.</p>
+<p>To change a code cell to a text cell, you can press <code>Control-M M</code>.</p>
+<p>To change a text cell to a code cell, you can press <code>Control-M Y</code>.</p>
+</section>
+<section id="code-cells" class="level2">
+<h2 class="anchored" data-anchor-id="code-cells">Code cells</h2>
+<p>Code cells– which are actually the default type of cell in Colab– use the same set of commands as text cells, but instead of rendering the text, they run chunks of code.</p>
+<p>Let’s not beat around the bush! Press <code>Shift-Enter</code> again to run your first chunk of code.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"This is a code cell."</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Any Python code you type in this cell will be run when you press the 'Run' button"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"up there, or when you press any of the keyboard shortcuts you just learned."</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"If the code evaluates to something, or if it produces output, that output will be"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"shown beneath the cell after you run it."</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Let's keep on going. Press Shift-Enter to see what this cell produces and keep going"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"with our exercise."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Sidenote: You just learned how the print function works in Python 3!</strong></p>
+<p>And, therefore, an obligatory meme (via <a href="https://twitter.com/cszhu/status/1163476712044150790"><span class="citation" data-cites="cszhu">@cszhu</span> on Twitter</a>):</p>
+<p><img src="https://pbs.twimg.com/media/ECV_5d9U4AA3EqC?format=jpg&amp;name=large" alt="A joke about print statements. Program bug says: You couldn't stop me before. The programmer says: I was alone before. They are pictured next to characters labeled stack overflow and print statements." title="A joke about print statements" width="500"></p>
+</section>
+<section id="a-bit-more-on-printing-things" class="level2">
+<h2 class="anchored" data-anchor-id="a-bit-more-on-printing-things">A bit more on printing things</h2>
+<p><a href="https://docs.python.org/3.3/whatsnew/3.0.html">Here</a> are a few more examples of how to print things.</p>
+<p><a href="https://realpython.com/python-print/">Here</a> is more about <code>print()</code> than you likely ever wanted to know.</p>
+</section>
+<section id="errors" class="level2">
+<h2 class="anchored" data-anchor-id="errors">Errors</h2>
+<p>If your code generates an error, it will be displayed in addition to any output already produced.</p>
+<p><strong>IMPORTANT: These error messages are <em>incredibly helpful</em> when debugging. If you get an error, read it and see if it helps point you to where the problem is in your code.</strong></p>
+<p>So let’s make ourselves an error. We’ll commit the cardinal sin of dividing by zero.</p>
+<p>Run the cell below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Here is some printing."</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"And now here is an error:"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">/</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">Variables</h2>
+<p>The major difference between Python and R– at least in terms of getting started– is that in Python, you can only use <code>=</code> to assign variables.</p>
+<p>Let’s assign some variables:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">.5</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="va">True</span> <span class="co"># note another difference b/t R and Python: Boolean (T/F) values are not all caps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exercise-write-some-code-to-print-out-the-variables-weve-just-assigned" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-write-some-code-to-print-out-the-variables-weve-just-assigned">Exercise: Write some code to print out the variables we’ve just assigned</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="another-neat-thing-about-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="another-neat-thing-about-notebooks">Another neat thing about notebooks:</h2>
+<p>Any variables you define or modules you import in one code cell will be available in subsequent code cells.</p>
+<p>So for instance, if you run the cell below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random  <span class="co"># a useful module that we'll come back to later</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>stuff <span class="op">=</span> [<span class="st">"cheddar"</span>, <span class="st">"daguerrotype"</span>, <span class="st">"elephant"</span>, <span class="st">"flea market"</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random.choice(stuff)) <span class="co"># choice is a function that-- you guessed it-- makes a random choice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>… then in subsequent cells you can do this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(random.choice(stuff)) <span class="co"># choice is a function that-- you guessed it-- makes a random choice</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exercise-write-some-code-and-then-run-it" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-write-some-code-and-then-run-it">Exercise: Write some code and then run it</h2>
+<p>Using the previous two code cells as a guide… - Reassign the “stuff” variable with four different words - Use the “choice” function, as above, to randomly print one of those four words</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>FYI:</strong> “stuff” is a list, which is a type of value in Python which represents a sequence of values. It’s a very common and versatile data structure and is often used to represent tabular data (among other information).</p>
+<p>More on lists in tonight’s homework. But to conclude for the day:</p>
+</section>
+<section id="keyboard-shortcuts" class="level2">
+<h2 class="anchored" data-anchor-id="keyboard-shortcuts">Keyboard shortcuts</h2>
+<p>In Colab, most keyboard shortcuts start with <code>Control-M</code>. After that,</p>
+<ul>
+<li><code>Z</code> undoes the previous action (inside a cell)</li>
+<li><code>H</code> is find and replace</li>
+<li><code>A</code> inserts a code cell above</li>
+<li><code>B</code> inserts a code cell below</li>
+<li><code>D</code> deletes a cell</li>
+</ul>
+</section>
+<section id="saving-submitting-your-work" class="level2">
+<h2 class="anchored" data-anchor-id="saving-submitting-your-work">Saving / submitting your work</h2>
+<p>In theory, Colab will save your work as you type. If you want to make double sure that your work is saved, <code>Cmd-S</code> at any time will save your notebook. (You can also select <code>File-&gt;Save</code> from the menu up there.</p>
+<p>When it comes time to submit a notebook for evaluation, select <code>File &gt; Download as &gt; Download .ipynb</code>. This is the file that you should submit.</p>
+<p>NB: Please do not just submit links to Colab notebooks as the grader will need to ensure that you’ve stopped working and submitted your notebook by a particular date.</p>
+</section>
+<section id="viewing-editing-notebooks-outside-of-colab" class="level2">
+<h2 class="anchored" data-anchor-id="viewing-editing-notebooks-outside-of-colab">Viewing / editing notebooks outside of Colab</h2>
+<p>You may have already noticed that just double-clicking on an <code>.ipynb</code> file that you’ve saved to your computer doesn’t open it. The technical explanation for this is that Colab runs as a cloud-based server, and every time you do something to / in a notebook file, it invovles a call to that server to figure out what to actually do.</p>
+<p>Sometimes, however, you just want to easily view or share an <code>.ipynb</code> file without a server. In many (but not all) cases, <code>.ipynb</code> files hosted on <a href="github.com">GitHub</a> will render very nicely. To wit, click <a href="https://github.com/laurenfklein/QTM340-Fall22/blob/main/notebooks/class3-colab-intro.ipynb">here</a> to see how this notebook holds up. But in cases where GitHub fails, or when the file is hosted elsewhere, <a href="http://nbviewer.ipython.org/">nbviewer</a> is good to know about. Note that the notebook needs to already exist online for nbviewer to work.</p>
+<p>For times that you don’t have internet access, or if you ever want to wean yourself off of Google products, you can also open/edit <code>.ipynb</code> files on your computer. To this, I recommend installing <a href="https://www.anaconda.com/products/distribution">Anaconda Navigator</a>, which is free and open source. Once you install that and run it, you will find that a bunch of other software/packages have been installed, which just require that you click to run then. Click on the option for <a href="https://jupyter.org/">Jupyter Notebook</a> and navigate to your <code>.ipynb</code> file from there.</p>
+<p><em>This notebook was created by Lauren Klein in Fall 2019, incorporating materials from <a href="https://github.com/aparrish/dmep-python-intro">Alison Parish</a> and <a href="https://github.com/emory-courses/data-science">Jinho Choi</a>. It was updated in Fall 2021, Spring 2021, and Fall 2022.</em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/DigitalPasts">
+      <i class="bi bi-github" role="img" aria-label="DigPasts GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/shgordin">
+      <i class="bi bi-twitter" role="img" aria-label="Shai Gordin Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:digpasts@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>   
+      <div class="nav-footer-center">© Digital Pasts Lab, 2025</div>
+  </div>
+</footer>
+
+
+
+</body></html>

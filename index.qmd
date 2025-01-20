@@ -1,13 +1,15 @@
 ---
 title: "Ancient Language Processing (ALP 2025)"
-image: Homepage_ALP2025-course.png
+image: EnumaElish_vectorSpace.png
 about: 
   template: marquee
   image-shape: rounded
-  #image-width: 20em
+  image-width: 43em
 ---
 
-## **Short Description**
+## **Short Description**[^1]
+
+[^1]: The scatter plot at the top of the page shows relative word frequencies across the seven tablets of Standard Babylonian *Enūma eliš* (Poem of Creation), using t-SNE dimension reduction to represent relative distances between words in 2D vector space (reproduced using [Voyant Tools](https://voyant-tools.org/?analysis=tsne&limit=152&clusters=4&perplexity=9&iterations=1600&label=summary&label=docs&label=terms&corpus=9a028a76bb22320092f109f6a35d5769&view=ScatterPlot), see Sinclair, S. & G. Rockwell. (2023). ScatterPlot. *Voyant Tools*. Retrieved March 21, 2023)
 
 How do we turn an ancient text into data? How do we apply data science techniques to historical, cultural, and linguistic questions? What are the ramifications of such transformations when confronted with classical approaches to ancient texts? The Ancient Language Processing course will focus specifically on how to answer the above questions when working with ancient languages and scripts from the emergence of writing in Mesopotamia and Egypt, to the rest of the world up till 800 CE. This course will introduce students of ancient history, ancient Near Eastern languages, and computer science to the computational processing of ancient texts. They will engage with inscribed artefacts–from dataset pre-processing to computational analysis via text parsing, vector space models (VSMs), statistical approaches, and graph theory.
 
