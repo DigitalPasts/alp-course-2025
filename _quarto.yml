@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Ancient Language Processing / Gordin, Mara, and Lincke"
+  open-graph: true
+  reader-mode: true
+  navbar:
+    logo: digpasts_logo.png
+    left:
+      - text: "Homepage"
+        href: index.qmd
+      - text: "Course Schedule"  
+        href: about.qmd
+      - text: "Coursework"
+        menu: 
+          - text: "Workload and Assessment"
+            href: assignments/index.qmd
+          - text: "Assignment Schedule"
+            href: assignments/scheduale.qmd
+      - text: "Materials and Texts"
+        href: resources.qmd
+        
+  page-footer:
+    background: light
+    center: "© Digital Pasts Lab, 2025"
+    left: 
+      - icon: github
+        href: https://github.com/DigitalPasts
+        aria-label: DigPasts GitHub
+      - icon: twitter 
+        href: https://twitter.com/shgordin
+        aria-label: Shai Gordin Twitter
+      - icon: envelope
+        href: mailto:digpasts@gmail.com
+
+format:
+  html:
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap" rel="stylesheet">
+    theme: cosmo
+    css: styles.css
+    toc: true
