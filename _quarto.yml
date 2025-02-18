@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Ancient Language Processing / Gordin, Mara, and Lincke"
+  title: "Ancient Language Processing / Gordin, Lincke, and Mara"
   open-graph: true
   reader-mode: true
   navbar:
@@ -11,6 +11,12 @@ website:
     left:
       - text: "Course Schedule"  
         href: about.qmd
+      - text: "Code Notebooks"  
+        menu: 
+          - text: "Notebooks"
+            href: notebooks/index.qmd
+          - text: "Colab Intro"
+            href: notebooks/01_colab_intro.ipynb
       - text: "Coursework"
         menu: 
           - text: "Workload and Assessment"

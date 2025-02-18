@@ -4,8 +4,6 @@ title: "resources"
 
 ### **Mandatory**
 
-ACL (2023) Term Paper Template. *Computational Humanities article style*. <https://2023.aclweb.org/calls/style_and_formatting/>
-
 Gavin, Michael (2022) *Literary Mathematics: Quantitative Theory for Textual Studies*. Stanford, Stanford University Press. <https://www.zotero.org/groups/4809611/ancient_language_processing/items/itemKey/4VL57XZQ>
 
 Svärd, S., Alstola, T., Jauhiainen, H., Sahala, A., and Lindén, K. (2020) Fear in Akkadian texts: New digital perspectives on lexical semantics, in: S.-W. Hsu and J. Llop-Raduà (eds.). *Culture and History of the Ancient Near East*. Leiden, Brill. <https://doi.org/10.1163/9789004430761_019.>
@@ -17,7 +15,5 @@ Alstola, T., Jauhiainen, H., Svärd, S., Sahala, A., and Lindén, K. (2022) Digi
 Berti, Monica, ed. (2019) *Digital Classical Philology: Ancient Greek and Latin in the Digital Revolution*. De Gruyter. <https://doi.org/10.1515/9783110599572>
 
 Carroll, S.R., Herczog, E., Hudson, M. et al. (2021) Operationalizing the CARE and FAIR Principles for Indigenous data futures. *Sci Data 8, 108*. <https://doi.org/10.1038/s41597-021-00892-0>
-
-Piotrowski, Michael (2012) *Natural Language Processing for Historical Texts*. Synthesis Lectures on Human Language Technologies 17. San Rafael, California, Morgan & Claypool. <http://archive.org/details/naturallanguagep0000piot>
 
 For more see the designated course Zotero library still under construction: <https://www.zotero.org/groups/4809611/ancient_language_processing>

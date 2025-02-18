@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "Schedule",
     "section": "",
-    "text": "Date\nTopic\nKeywords\nAssignment\nMaterials\n\n\n\n\n09/04/25\nBrushing-up on your Python\nCharacter encoding; Regex; Pandas; Parsing; Functions\nChoose one ancient language DH project or resource: describe the work flow, how the data is processed, what methods are used, and what kind(s) of output are presented\n\nReading:\n\n\n\nNotebooks:\n\nColab intro\nPython brush-up\n\n\n\n\n23/04/25\nDoing Computational Philology: the (ideal) pipeline"
+    "text": "Date\nTopic\nKeywords\nAssignment\nMaterials\n\n\n\n\n09/04/25\nBrushing-up on your Python\nCharacter encoding; Regex; Pandas; Parsing; Functions\nChoose one ancient language dataset: familiarize yourself with the data model, consider how this data model fits with the datasets presented in class. Remodel your data accordingly. Do not forget collecting metadata as defined in the class examples.\n\nReading:\n\n***\n\nNotebooks:\n\nColab intro\nPython brush-up\n\n\n\n\n23/04/25\nDoing Computational Philology: the (ideal) pipeline\nresearch questions; microscope vs macroscope; quantification; large language models\nExplore your dataset: upload the data into Voyant (or similar programs) or into an LLM and describe it based on distant reading techniques (i.e. quantification). Following this analysis decide where close reading would be necessary.\n\nReading:\n\n***\n\nTools:\n\nVoyant\nAntConc\nLLM (ChatGPT, Claude, Olmoe etc.)"
   },
   {
     "objectID": "index.html#course-objectives",
@@ -58,9 +58,9 @@
   {
     "objectID": "notebooks/01_colab_intro.html",
     "href": "notebooks/01_colab_intro.html",
-    "title": "Ancient Language Processing / Gordin, Mara, and Lincke",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
     "section": "",
-    "text": "Google Colab is a cloud-based notebook-style platform for programming in Python (among other languages), which allows you to intersperse executable code with chunks of text like this. It lets you (mostly) avoid the command line, and results in a file that is easy to read and easy to share with others.\nWe’ll be using Colab for in-class exercises and for many of the homework assignments.\n\n\nColab makes it easy for me to share notebooks with you, and for all of us to install any required libraries on a single platform. (This is a big reason why we’re using Colab in this class). One caveat about working with notebooks on Colab is that they are shared with you in a read-only format.\nTo get started, your very first step should always be to choose File > Save a copy in Drive from the menu at the top of the page, and make all future edits/modifications on that copy.\nIn general, I recommend naming the file something with your name in it so as to tell it apart from the original.\nNB: If you are an advanced Python user and you’d prefer to use git/GitHub to keep track of your notebooks, I will also maintain a repsitory of class notebooks here.\n\n\n\nA notebook consists of a number of “cells,” stacked on the page from top to bottom. Cells can have text or code in them.\nYou can add a new text cell or a code cell by using the + Code or + Text button at the top of the page.\nWhen you click one or the other of those buttons, it will add a cell right below the cell you have currently selected. If your cell ends up in the wrong place, you can click the up or down arrow over there on the far right of the cell to move it up or down, until you get it to the spot you intended.\n\n\n\nLet’s make a text cell!\nTo make a new text cell below this one, do this: * Click on this cell to select it. * Click the + Text button at the top of the page. * Type some stuff and press Shift-Return (or Shift-Enter on some keyboards).\nColab will “render” the text and display it on the page in rendered format. You can hit Return or Enter, or double-click the cell, to edit its contents again.\nIn Colab, you can just use the formatting options at the top of the cell to format the text.\nNB: If you are curious as to why the formatting options insert some special characers into the text, it is because Colab formats text using a language called Markdown. If you want to learn more about Markdown, here is a tutorial, although I prefer to just consult a cheat sheet like this one.\n\n\n\nHere is your first exericse: Insert a new cell just below this one, and us the formattinng palate to make some text bold, some text italics, and some:\n\ntext\nin\na\nlist\n\n\n\n\n\nInstead of pressing Shift-Enter, you can press Alt-Enter (or Option-Return on a Mac) to render the current cell and create a new cell just below. New cells will by default be Code cells.\nTo change a code cell to a text cell, you can press Control-M M.\nTo change a text cell to a code cell, you can press Control-M Y.\n\n\n\nCode cells– which are actually the default type of cell in Colab– use the same set of commands as text cells, but instead of rendering the text, they run chunks of code.\nLet’s not beat around the bush! Press Shift-Enter again to run your first chunk of code.\n\nprint(\"This is a code cell.\")\nprint(\"\")\nprint(\"Any Python code you type in this cell will be run when you press the 'Run' button\")\nprint(\"up there, or when you press any of the keyboard shortcuts you just learned.\")\nprint(\"\")\nprint(\"If the code evaluates to something, or if it produces output, that output will be\")\nprint(\"shown beneath the cell after you run it.\")\nprint(\"\")\nprint(\"Let's keep on going. Press Shift-Enter to see what this cell produces and keep going\")\nprint(\"with our exercise.\")\n\nSidenote: You just learned how the print function works in Python 3!\nAnd, therefore, an obligatory meme (via @cszhu on Twitter):\n\n\n\n\nHere are a few more examples of how to print things.\nHere is more about print() than you likely ever wanted to know.\n\n\n\nIf your code generates an error, it will be displayed in addition to any output already produced.\nIMPORTANT: These error messages are incredibly helpful when debugging. If you get an error, read it and see if it helps point you to where the problem is in your code.\nSo let’s make ourselves an error. We’ll commit the cardinal sin of dividing by zero.\nRun the cell below.\n\nprint(\"Here is some printing.\")\nprint(\"And now here is an error:\")\n\n1 / 0\n\n\n\n\nThe major difference between Python and R– at least in terms of getting started– is that in Python, you can only use = to assign variables.\nLet’s assign some variables:\n\nx = 0\ny = .5\nz = True # note another difference b/t R and Python: Boolean (T/F) values are not all caps\n\n\n\n\n\n# your code here\n\n\n\n\nAny variables you define or modules you import in one code cell will be available in subsequent code cells.\nSo for instance, if you run the cell below:\n\nimport random  # a useful module that we'll come back to later\nstuff = [\"cheddar\", \"daguerrotype\", \"elephant\", \"flea market\"]\n\nprint(random.choice(stuff)) # choice is a function that-- you guessed it-- makes a random choice\n\n… then in subsequent cells you can do this:\n\nprint(random.choice(stuff)) # choice is a function that-- you guessed it-- makes a random choice\n\n\n\n\nUsing the previous two code cells as a guide… - Reassign the “stuff” variable with four different words - Use the “choice” function, as above, to randomly print one of those four words\n\n# your code here\n\nFYI: “stuff” is a list, which is a type of value in Python which represents a sequence of values. It’s a very common and versatile data structure and is often used to represent tabular data (among other information).\nMore on lists in tonight’s homework. But to conclude for the day:\n\n\n\nIn Colab, most keyboard shortcuts start with Control-M. After that,\n\nZ undoes the previous action (inside a cell)\nH is find and replace\nA inserts a code cell above\nB inserts a code cell below\nD deletes a cell\n\n\n\n\nIn theory, Colab will save your work as you type. If you want to make double sure that your work is saved, Cmd-S at any time will save your notebook. (You can also select File->Save from the menu up there.\nWhen it comes time to submit a notebook for evaluation, select File > Download as > Download .ipynb. This is the file that you should submit.\nNB: Please do not just submit links to Colab notebooks as the grader will need to ensure that you’ve stopped working and submitted your notebook by a particular date.\n\n\n\nYou may have already noticed that just double-clicking on an .ipynb file that you’ve saved to your computer doesn’t open it. The technical explanation for this is that Colab runs as a cloud-based server, and every time you do something to / in a notebook file, it invovles a call to that server to figure out what to actually do.\nSometimes, however, you just want to easily view or share an .ipynb file without a server. In many (but not all) cases, .ipynb files hosted on GitHub will render very nicely. To wit, click here to see how this notebook holds up. But in cases where GitHub fails, or when the file is hosted elsewhere, nbviewer is good to know about. Note that the notebook needs to already exist online for nbviewer to work.\nFor times that you don’t have internet access, or if you ever want to wean yourself off of Google products, you can also open/edit .ipynb files on your computer. To this, I recommend installing Anaconda Navigator, which is free and open source. Once you install that and run it, you will find that a bunch of other software/packages have been installed, which just require that you click to run then. Click on the option for Jupyter Notebook and navigate to your .ipynb file from there.\nThis notebook was created by Lauren Klein in Fall 2019, incorporating materials from Alison Parish and Jinho Choi. It was updated in Fall 2021, Spring 2021, and Fall 2022."
+    "text": "Google Colab is a cloud-based notebook-style platform for programming in Python (among other languages), which allows you to intersperse executable code with chunks of text like this. It lets you (mostly) avoid the command line, and results in a file that is easy to read and easy to share with others.\nWe’ll be using Colab for in-class exercises and for many of the homework assignments."
   },
   {
     "objectID": "notebooks/05_Vector_Space_Model.html",
@@ -158,27 +158,146 @@
     "href": "about.html#unit-3-operationalization-and-the-vector-space",
     "title": "Schedule",
     "section": "Unit 3: Operationalization and the Vector Space",
-    "text": "Unit 3: Operationalization and the Vector Space\n\n\n\n\n\n\n\n\n\n\nDate\nTopic\nKeywords\nAssignment\nMaterials\n\n\n\n\n14/05/25\nPipeline III: Operationalization of words I - the vector space\n\n\n\n\n\n21/05/25\nPipeline IV: Operationalization of words II -\n\n\n\n\n\n28/05/25"
+    "text": "Unit 3: Operationalization and the Vector Space\n\n\n\n\n\n\n\n\n\n\nDate\nTopic\nKeywords\nAssignment\nMaterials\n\n\n\n\n14/05/25\nPipeline III: Operationalization of words I - the vector space\n\n\n\n\n\n21/05/25\nPipeline IV: Operationalization of words II - measuring distances"
   },
   {
     "objectID": "about.html#unit-4-network-analysis-and-visualization",
     "href": "about.html#unit-4-network-analysis-and-visualization",
     "title": "Schedule",
     "section": "Unit 4: Network Analysis and Visualization",
-    "text": "Unit 4: Network Analysis and Visualization\n\n\n\n\n\n\n\n\n\n\nDate\nTopic\nKeywords\nAssignment\nMaterials\n\n\n\n\n04/06/25\n\n\n\n\n\n\n11/06/25"
+    "text": "Unit 4: Network Analysis and Visualization\n\n\n\n\n\n\n\n\n\n\nDate\nTopic\nKeywords\nAssignment\nMaterials\n\n\n\n\n28/05/25\nPipeline V: Visualization I - Graph theory\n\n\n\n\n\n04/06/25\nPipeline VI: Visualization II - Network metrics\n\n\n\n\n\n11/06/25\nPresentation of class projects and feedback"
   },
   {
     "objectID": "assignments/index.html",
     "href": "assignments/index.html",
     "title": "Assignments and Active Participation",
     "section": "",
-    "text": "We meet on a weekly basis for two and a half hours (synchronic mode) which sums up to c. 30 hours over the course of the semester (equivalent to 1 credit point). See schedule for further information on the meetings.\nWe will build a shared glossary of terms and concepts that are important in Ancient Language Processing. Students are going to work in groups of two on the terms assigned to them, providing a short definition and links to more extensive explanations. Writing will be done on the GitHub collaborative platform and will be accessible through the course homepage. (c. 30 hours = 1 credit point)\nStudents will develop their own projects based on data provided by the instructors or by data that they contribute. The project plan requires (a) a humanistic research question, (b) operationalize it (i.e., develop a workflow to tackle the question computationally) and (c) present a poster describing their data set, methods, analysis, interpretation and results. The structure of the poster will follow a template of a typical computational humanities paper. (c. 120 hours = 4 credit points)"
+    "text": "We meet on a weekly basis for two and a half hours (synchronic mode) which sums up to c. 30 hours over the course of the semester (equivalent to 1 credit point). See schedule for further information on the meetings.\nWe will build a shared glossary of terms and concepts that are important in Ancient Language Processing. Students are going to work in groups of two on the terms assigned to them, providing a short definition and links to more extensive explanations. Writing will be done on the GitHub collaborative platform and will be accessible through the course homepage. (c. 30 hours = 1 credit point)\nStudents will develop their own projects based on data provided by the instructors or by data that they contribute. The project plan requires (a) a humanistic research question, (b) operationalize it (i.e., develop a workflow to tackle the question computationally) and (c) present a poster describing their data set, methods, analysis, interpretation and results. The structure of the poster will follow a template of a typical computational humanities paper. (c. 120 hours = 4 credit points)\nACL (2023) Term Paper Template. Computational Humanities article style. https://2023.aclweb.org/calls/style_and_formatting/"
   },
   {
     "objectID": "assignments/index.html#assessment",
     "href": "assignments/index.html#assessment",
     "title": "Assignments and Active Participation",
     "section": "Assessment",
-    "text": "Assessment\n\n\n\n\n\n\n\n\n\nActivity\nNumber\nWeight (%)/activity\nWeight (%)\n\n\nParticipation\n13\nmandatory\n0\n\n\nAssignments\n4\n2\n30\n\n\nShort research paper (3,000 words) + code notebooks (github) + 20 min. presentation\n1\n80\n70\n\n\nTotal (%)\n\n\n100"
+    "text": "Assessment\n\n\n\n\n\n\n\n\n\nActivity\nNumber\nWeight (%)/activity\nWeight (%)\n\n\nParticipation\n13\nmandatory\n0\n\n\nAssignments\n4\n2\n30\n\n\nResearch poster (1,000 words) + code notebooks (github) + 10 min. presentation\n1\n80\n70\n\n\nTotal (%)\n\n\n100"
+  },
+  {
+    "objectID": "about.html#unit-1-what-is-ancient-language-processing",
+    "href": "about.html#unit-1-what-is-ancient-language-processing",
+    "title": "Schedule",
+    "section": "",
+    "text": "Date\nTopic\nKeywords\nAssignment\nMaterials\n\n\n\n\n09/04/25\nBrushing-up on your Python\nCharacter encoding; Regex; Pandas; Parsing; Functions\nChoose one ancient language dataset: familiarize yourself with the data model, consider how this data model fits with the datasets presented in class. Remodel your data accordingly. Do not forget collecting metadata as defined in the class examples.\n\nReading:\n\n***\n\nNotebooks:\n\nColab intro\nPython brush-up\n\n\n\n\n23/04/25\nDoing Computational Philology: the (ideal) pipeline\nresearch questions; microscope vs macroscope; quantification; large language models\nExplore your dataset: upload the data into Voyant (or similar programs) or into an LLM and describe it based on distant reading techniques (i.e. quantification). Following this analysis decide where close reading would be necessary.\n\nReading:\n\n***\n\nTools:\n\nVoyant\nAntConc\nLLM (ChatGPT, Claude, Olmoe etc.)"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "resources",
+    "section": "",
+    "text": "Mandatory\nGavin, Michael (2022) Literary Mathematics: Quantitative Theory for Textual Studies. Stanford, Stanford University Press. https://www.zotero.org/groups/4809611/ancient_language_processing/items/itemKey/4VL57XZQ\nSvärd, S., Alstola, T., Jauhiainen, H., Sahala, A., and Lindén, K. (2020) Fear in Akkadian texts: New digital perspectives on lexical semantics, in: S.-W. Hsu and J. Llop-Raduà (eds.). Culture and History of the Ancient Near East. Leiden, Brill. https://doi.org/10.1163/9789004430761_019.\n\n\nOptional\nAlstola, T., Jauhiainen, H., Svärd, S., Sahala, A., and Lindén, K. (2022) Digital Approaches to Analyzing and Translating Emotion: What Is Love?, in: K. Sonik and U. Steinert (eds.). The Routledge Handbook of Emotions in the Ancient Near East. London & New York, Routledge. https://doi.org/10.4324/9780367822873-6\nBerti, Monica, ed. (2019) Digital Classical Philology: Ancient Greek and Latin in the Digital Revolution. De Gruyter. https://doi.org/10.1515/9783110599572\nCarroll, S.R., Herczog, E., Hudson, M. et al. (2021) Operationalizing the CARE and FAIR Principles for Indigenous data futures. Sci Data 8, 108. https://doi.org/10.1038/s41597-021-00892-0\nFor more see the designated course Zotero library still under construction: https://www.zotero.org/groups/4809611/ancient_language_processing"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#lets-get-started",
+    "href": "notebooks/01_colab_intro.html#lets-get-started",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Let’s get started!",
+    "text": "Let’s get started!\nColab makes it easy for me to share notebooks with you, and for all of us to install any required libraries on a single platform. (This is a big reason why we’re using Colab in this class). One caveat about working with notebooks on Colab is that they are shared with you in a read-only format.\nTo get started, your very first step should always be to choose File &gt; Save a copy in Drive from the menu at the top of the page, and make all future edits/modifications on that copy.\nIn general, I recommend naming the file something with your name in it so as to tell it apart from the original.\nNB: If you are an advanced Python user and you’d prefer to use git/GitHub to keep track of your notebooks, I will also maintain a repsitory of class notebooks here."
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#and-off-we-go",
+    "href": "notebooks/01_colab_intro.html#and-off-we-go",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "And off we go!",
+    "text": "And off we go!\nA notebook consists of a number of “cells,” stacked on the page from top to bottom. Cells can have text or code in them.\nYou can add a new text cell or a code cell by using the + Code or + Text button at the top of the page.\nWhen you click one or the other of those buttons, it will add a cell right below the cell you have currently selected. If your cell ends up in the wrong place, you can click the up or down arrow over there on the far right of the cell to move it up or down, until you get it to the spot you intended."
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#your-first-cell",
+    "href": "notebooks/01_colab_intro.html#your-first-cell",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Your first cell",
+    "text": "Your first cell\nLet’s make a text cell!\nTo make a new text cell below this one, do this: * Click on this cell to select it. * Click the + Text button at the top of the page. * Type some stuff and press Shift-Return (or Shift-Enter on some keyboards).\nColab will “render” the text and display it on the page in rendered format. You can hit Return or Enter, or double-click the cell, to edit its contents again.\nIn Colab, you can just use the formatting options at the top of the cell to format the text.\nNB: If you are curious as to why the formatting options insert some special characers into the text, it is because Colab formats text using a language called Markdown. If you want to learn more about Markdown, here is a tutorial, although I prefer to just consult a cheat sheet like this one."
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#exercise-make-a-text-cell-with-some-formatting-using-markdown",
+    "href": "notebooks/01_colab_intro.html#exercise-make-a-text-cell-with-some-formatting-using-markdown",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Exercise: Make a text cell with some formatting using Markdown",
+    "text": "Exercise: Make a text cell with some formatting using Markdown\nHere is your first exericse: Insert a new cell just below this one, and us the formattinng palate to make some text bold, some text italics, and some:\n\ntext\nin\na\nlist"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#three-helpful-shortcuts",
+    "href": "notebooks/01_colab_intro.html#three-helpful-shortcuts",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Three helpful shortcuts",
+    "text": "Three helpful shortcuts\nInstead of pressing Shift-Enter, you can press Alt-Enter (or Option-Return on a Mac) to render the current cell and create a new cell just below. New cells will by default be Code cells.\nTo change a code cell to a text cell, you can press Control-M M.\nTo change a text cell to a code cell, you can press Control-M Y."
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#code-cells",
+    "href": "notebooks/01_colab_intro.html#code-cells",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Code cells",
+    "text": "Code cells\nCode cells– which are actually the default type of cell in Colab– use the same set of commands as text cells, but instead of rendering the text, they run chunks of code.\nLet’s not beat around the bush! Press Shift-Enter again to run your first chunk of code.\n\nprint(\"This is a code cell.\")\nprint(\"\")\nprint(\"Any Python code you type in this cell will be run when you press the 'Run' button\")\nprint(\"up there, or when you press any of the keyboard shortcuts you just learned.\")\nprint(\"\")\nprint(\"If the code evaluates to something, or if it produces output, that output will be\")\nprint(\"shown beneath the cell after you run it.\")\nprint(\"\")\nprint(\"Let's keep on going. Press Shift-Enter to see what this cell produces and keep going\")\nprint(\"with our exercise.\")\n\nSidenote: You just learned how the print function works in Python 3!\nAnd, therefore, an obligatory meme (via @cszhu on Twitter):"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#a-bit-more-on-printing-things",
+    "href": "notebooks/01_colab_intro.html#a-bit-more-on-printing-things",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "A bit more on printing things",
+    "text": "A bit more on printing things\nHere are a few more examples of how to print things.\nHere is more about print() than you likely ever wanted to know."
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#errors",
+    "href": "notebooks/01_colab_intro.html#errors",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Errors",
+    "text": "Errors\nIf your code generates an error, it will be displayed in addition to any output already produced.\nIMPORTANT: These error messages are incredibly helpful when debugging. If you get an error, read it and see if it helps point you to where the problem is in your code.\nSo let’s make ourselves an error. We’ll commit the cardinal sin of dividing by zero.\nRun the cell below.\n\nprint(\"Here is some printing.\")\nprint(\"And now here is an error:\")\n\n1 / 0"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#variables",
+    "href": "notebooks/01_colab_intro.html#variables",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Variables",
+    "text": "Variables\nThe major difference between Python and R– at least in terms of getting started– is that in Python, you can only use = to assign variables.\nLet’s assign some variables:\n\nx = 0\ny = .5\nz = True # note another difference b/t R and Python: Boolean (T/F) values are not all caps"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#exercise-write-some-code-to-print-out-the-variables-weve-just-assigned",
+    "href": "notebooks/01_colab_intro.html#exercise-write-some-code-to-print-out-the-variables-weve-just-assigned",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Exercise: Write some code to print out the variables we’ve just assigned",
+    "text": "Exercise: Write some code to print out the variables we’ve just assigned\n\n# your code here"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#another-neat-thing-about-notebooks",
+    "href": "notebooks/01_colab_intro.html#another-neat-thing-about-notebooks",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Another neat thing about notebooks:",
+    "text": "Another neat thing about notebooks:\nAny variables you define or modules you import in one code cell will be available in subsequent code cells.\nSo for instance, if you run the cell below:\n\nimport random  # a useful module that we'll come back to later\nstuff = [\"cheddar\", \"daguerrotype\", \"elephant\", \"flea market\"]\n\nprint(random.choice(stuff)) # choice is a function that-- you guessed it-- makes a random choice\n\n… then in subsequent cells you can do this:\n\nprint(random.choice(stuff)) # choice is a function that-- you guessed it-- makes a random choice"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#exercise-write-some-code-and-then-run-it",
+    "href": "notebooks/01_colab_intro.html#exercise-write-some-code-and-then-run-it",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Exercise: Write some code and then run it",
+    "text": "Exercise: Write some code and then run it\nUsing the previous two code cells as a guide… - Reassign the “stuff” variable with four different words - Use the “choice” function, as above, to randomly print one of those four words\n\n# your code here\n\nFYI: “stuff” is a list, which is a type of value in Python which represents a sequence of values. It’s a very common and versatile data structure and is often used to represent tabular data (among other information).\nMore on lists in tonight’s homework. But to conclude for the day:"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#keyboard-shortcuts",
+    "href": "notebooks/01_colab_intro.html#keyboard-shortcuts",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Keyboard shortcuts",
+    "text": "Keyboard shortcuts\nIn Colab, most keyboard shortcuts start with Control-M. After that,\n\nZ undoes the previous action (inside a cell)\nH is find and replace\nA inserts a code cell above\nB inserts a code cell below\nD deletes a cell"
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#saving-submitting-your-work",
+    "href": "notebooks/01_colab_intro.html#saving-submitting-your-work",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Saving / submitting your work",
+    "text": "Saving / submitting your work\nIn theory, Colab will save your work as you type. If you want to make double sure that your work is saved, Cmd-S at any time will save your notebook. (You can also select File-&gt;Save from the menu up there.\nWhen it comes time to submit a notebook for evaluation, select File &gt; Download as &gt; Download .ipynb. This is the file that you should submit.\nNB: Please do not just submit links to Colab notebooks as the grader will need to ensure that you’ve stopped working and submitted your notebook by a particular date."
+  },
+  {
+    "objectID": "notebooks/01_colab_intro.html#viewing-editing-notebooks-outside-of-colab",
+    "href": "notebooks/01_colab_intro.html#viewing-editing-notebooks-outside-of-colab",
+    "title": "Intro to Google Colab (and some other tips and tricks)",
+    "section": "Viewing / editing notebooks outside of Colab",
+    "text": "Viewing / editing notebooks outside of Colab\nYou may have already noticed that just double-clicking on an .ipynb file that you’ve saved to your computer doesn’t open it. The technical explanation for this is that Colab runs as a cloud-based server, and every time you do something to / in a notebook file, it invovles a call to that server to figure out what to actually do.\nSometimes, however, you just want to easily view or share an .ipynb file without a server. In many (but not all) cases, .ipynb files hosted on GitHub will render very nicely. To wit, click here to see how this notebook holds up. But in cases where GitHub fails, or when the file is hosted elsewhere, nbviewer is good to know about. Note that the notebook needs to already exist online for nbviewer to work.\nFor times that you don’t have internet access, or if you ever want to wean yourself off of Google products, you can also open/edit .ipynb files on your computer. To this, I recommend installing Anaconda Navigator, which is free and open source. Once you install that and run it, you will find that a bunch of other software/packages have been installed, which just require that you click to run then. Click on the option for Jupyter Notebook and navigate to your .ipynb file from there.\nThis notebook was created by Lauren Klein in Fall 2019, incorporating materials from Alison Parish and Jinho Choi. It was updated in Fall 2021, Spring 2021, and Fall 2022."
   }
 ]
