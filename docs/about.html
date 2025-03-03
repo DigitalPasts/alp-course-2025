@@ -91,6 +91,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./about.html" aria-current="page">
  <span class="menu-text">Course Schedule</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./coursework.html">
+ <span class="menu-text">Coursework</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-code-notebooks" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Code Notebooks</span>
@@ -103,21 +107,6 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./notebooks/01_colab_intro.html">
  <span class="dropdown-text">Colab Intro</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-coursework" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Coursework</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-coursework">    
-        <li>
-    <a class="dropdown-item" href="./assignments/index.html">
- <span class="dropdown-text">Workload and Assessment</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./assignments/scheduale.html">
- <span class="dropdown-text">Assignment Schedule</span></a>
   </li>  
     </ul>
   </li>
@@ -181,7 +170,6 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header">
 <th>Date</th>
 <th><strong>Topic</strong></th>
-<th><strong>Keywords</strong></th>
 <th><strong>Assignment</strong></th>
 <th><strong>Materials</strong></th>
 </tr>
@@ -190,37 +178,28 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td>09/04/25</td>
 <td><p>Brushing-up on your Python</p>
-<p><strong>Keywords</strong>: Character encoding; Regex; Pandas; Parsing; Functions</p></td>
-<td></td>
+<p><span class="smallcaps">character encoding; regex; pandas; parsing; functions</span></p></td>
 <td><strong>Choose one ancient language dataset</strong>: familiarize yourself with the data model, consider how this data model fits with the datasets presented in class. <u>Remodel your data accordingly</u>. Do not forget collecting metadata as defined in the class examples.</td>
-<td><ul>
-<li>Reading:</li>
-</ul>
-<p>***</p>
+<td><p>Tutorials:</p>
 <ul>
-<li><p>Notebooks:</p>
-<ol type="1">
-<li><a href="./notebooks/01_colab_intro.html">Colab intro</a></li>
-<li><a href="./notebooks/02_Python_Brush_up.html">Python brush-up</a></li>
-</ol></li>
+<li><p><a href="https://www.simplilearn.com/tutorials/python-tutorial/python-functions" target="_blank">How to define a function</a></p></li>
+<li><p><a href="https://www.programiz.com/python-programming/list-comprehension" target="_blank">List comprehensions</a></p></li>
+<li><p><a href="https://niekveldhuis.github.io/sumnet/PartI-ExtractLemmatizationfromJSON.html" target="_blank">Load, parse and extract data from ORACC json files</a></p></li>
+<li><p><a href="https://regex101.com" target="_blank">RegEx101.com</a></p></li>
 </ul></td>
 </tr>
 <tr class="even">
 <td>23/04/25</td>
-<td>Doing Computational Philology: the (ideal) pipeline</td>
-<td>research questions; microscope vs macroscope; quantification; large language models</td>
+<td><p>Doing Computational Philology: the (ideal) pipeline</p>
+<p><span class="smallcaps">research questions; microscope vs macroscope; quantification; large language models</span></p></td>
 <td><strong>Explore your dataset</strong>: upload the data into Voyant (or similar programs) or into an LLM and describe it based on distant reading techniques (i.e.&nbsp;quantification). Following this analysis decide where close reading would be necessary.</td>
-<td><ul>
-<li>Reading:</li>
-</ul>
-<p>***</p>
+<td><p>Reading:</p>
+<p><a href="https://drive.google.com/file/d/1ZBWdgYdPBodSTIMVyBkv96Tpq4IhKeT-/view?usp=sharing" target="_blank">Rockwell &amp; Sinclair (2016)</a>; <a href="https://doi.org/10.1162/coli_a_00481" target="_blank">Sommerschield et al.&nbsp;(2023)</a></p>
+<p>Tools:</p>
 <ul>
-<li><p>Tools:</p>
-<ol type="1">
-<li>Voyant</li>
-<li>AntConc</li>
+<li><a href="https://voyant-tools.org" target="_blank">Voyant Tools</a></li>
+<li><a href="https://www.laurenceanthony.net/software/antconc/" target="_blank">AntConc</a></li>
 <li>LLM (ChatGPT, Claude, Olmoe etc.)</li>
-</ol></li>
 </ul></td>
 </tr>
 </tbody>
@@ -229,18 +208,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="unit-2-digitization-and-annotation" class="level2">
 <h2 class="anchored" data-anchor-id="unit-2-digitization-and-annotation">Unit 2: Digitization and Annotation</h2>
 <table class="table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 43%">
-<col style="width: 20%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Date</th>
 <th><strong>Topic</strong></th>
-<th><strong>Keywords</strong></th>
 <th><strong>Assignment</strong></th>
 <th><strong>Materials</strong></th>
 </tr>
@@ -248,17 +219,18 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>30/04/25</td>
-<td>Pipeline I: Optical / Handwritten Character Recognition</td>
-<td>OCR; HTR; data structure</td>
+<td>Pipeline I: Optical / Handwritten Character Recognition<br>
+<br>
+OCR, HTR, layout analysis, line segmentation, transcribing</td>
 <td></td>
-<td></td>
+<td><a href="https://aclanthology.org/2024.ml4al-1.14/" target="_blank">Gordin, Alper et al.&nbsp;(2024)</a>; <a href="https://www.geschkult.fu-berlin.de/e/aegyptologie/personen/Professorinnen-und-Professoren/Lincke/Lincke_2021_OCR-Coptic.pdf" target="_blank">Lincke (2021)</a>; <a href="https://digitalorientalist.com/2022/11/15/escriptorium-digital-text-production-for-urdu-hindi-and-bengali-print-part-1/" target="_blank">Chauhan’s blogpost (2022)</a></td>
 </tr>
 <tr class="even">
 <td>07/05/25</td>
-<td>Pipeline II: Annotation (Lemmatization)</td>
+<td><p>Pipeline II: Annotation</p>
+<p>Lemmatization, PoS-Tagging, Treebanking</p></td>
 <td></td>
-<td></td>
-<td></td>
+<td><a href="https://doi.org/10.1093/llc/fqae002" target="_blank">Ong &amp; Gordin (2024)</a>; <a href="https://doi.org/10.18653/v1/2024.ml4al-1.10" target="_blank">Sahala &amp; Lincke (2024)</a></td>
 </tr>
 </tbody>
 </table>
@@ -267,17 +239,15 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="unit-3-operationalization-and-the-vector-space">Unit 3: Operationalization and the Vector Space</h2>
 <table class="table">
 <colgroup>
-<col style="width: 8%">
-<col style="width: 52%">
-<col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 59%">
+<col style="width: 14%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Date</th>
 <th><strong>Topic</strong></th>
-<th><strong>Keywords</strong></th>
 <th><strong>Assignment</strong></th>
 <th><strong>Materials</strong></th>
 </tr>
@@ -288,12 +258,10 @@ ul.task-list li input[type="checkbox"] {
 <td>Pipeline III: Operationalization of words I - the vector space</td>
 <td></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="even">
 <td>21/05/25</td>
 <td>Pipeline IV: Operationalization of words II - measuring distances</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>
@@ -304,17 +272,15 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="unit-4-network-analysis-and-visualization">Unit 4: Network Analysis and Visualization</h2>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 44%">
-<col style="width: 13%">
-<col style="width: 15%">
-<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 52%">
+<col style="width: 17%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Date</th>
 <th><strong>Topic</strong></th>
-<th><strong>Keywords</strong></th>
 <th><strong>Assignment</strong></th>
 <th><strong>Materials</strong></th>
 </tr>
@@ -325,19 +291,16 @@ ul.task-list li input[type="checkbox"] {
 <td>Pipeline V: Visualization I - Graph theory</td>
 <td></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="even">
 <td>04/06/25</td>
 <td>Pipeline VI: Visualization II - Network metrics</td>
 <td></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="odd">
 <td>11/06/25</td>
 <td>Presentation of class projects and feedback</td>
-<td></td>
 <td></td>
 <td></td>
 </tr>

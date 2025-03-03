@@ -11,18 +11,14 @@ website:
     left:
       - text: "Course Schedule"  
         href: about.qmd
+      - text: "Coursework"
+        href: coursework.qmd
       - text: "Code Notebooks"  
         menu: 
           - text: "Notebooks"
             href: notebooks/index.qmd
           - text: "Colab Intro"
             href: notebooks/01_colab_intro.ipynb
-      - text: "Coursework"
-        menu: 
-          - text: "Workload and Assessment"
-            href: assignments/index.qmd
-          - text: "Assignment Schedule"
-            href: assignments/scheduale.qmd
       - text: "Materials and Texts"
         href: resources.qmd
         
