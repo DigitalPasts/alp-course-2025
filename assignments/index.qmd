@@ -12,10 +12,10 @@ title: "Assignments and Active Participation"
 
 ## Assessment
 
-|                                                                                |            |                         |                |
-|--------------------------------------------------------------------------------|------------|-------------------------|----------------|
-| **Activity**                                                                   | **Number** | **Weight (%)/activity** | **Weight (%)** |
-| Participation                                                                  | 13         | mandatory               | 0              |
-| Assignments                                                                    | 4          | 2                       | 30             |
-| Research poster (1,000 words) + code notebooks (github) + 10 min. presentation | 1          | 80                      | 70             |
-| Total (%)                                                                      |            |                         | 100            |
+|  |  |  |  |
+|----|----|----|----|
+| **Activity** | **Number** | **Weight (%)/activity** | **Weight (%)** |
+| Participation | 13 | mandatory | 0 |
+| Assignments | 4 | 2 | 30 |
+| Research poster (1,000 words) + code notebooks (github) + 10 min. presentation | 1 | 80 | 70 |
+| Total (%) |  |  | 100 |
