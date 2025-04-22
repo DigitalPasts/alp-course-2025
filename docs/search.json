@@ -18,7 +18,7 @@
     "href": "about.html#unit-2-digitization-and-annotation",
     "title": "Schedule",
     "section": "Unit 2: Digitization and Annotation",
-    "text": "Unit 2: Digitization and Annotation\n\n\n\nDate\nTopic\nAssignment\nMaterials\n\n\n\n\n30/04/25\nPipeline I: Optical / Handwritten Character Recognition\n\nOCR, HTR, layout analysis, line segmentation, transcribing\n\nGordin, Alper et al. (2024); Lincke (2021); Chauhan’s blogpost (2022)\n\n\n07/05/25\nPipeline II: Annotation\nLemmatization, PoS-Tagging, Treebanking\n\nOng & Gordin (2024); Sahala & Lincke (2024)"
+    "text": "Unit 2: Digitization and Annotation\n\n\n\nDate\nTopic\nAssignment\nMaterials\n\n\n\n\n30/04/25\nPipeline I: Optical / Handwritten Character Recognition\n\nOCR, HTR, layout analysis, line segmentation, transcribing\n\nGordin, Alper et al. (2024); Lincke (2021); Chauhan’s blogpost (2022)\n\n\n07/05/25\nPipeline II: Annotation\nLemmatization, PoS-Tagging, Treebanking\n\nOng & Gordin (2024); Sahala & Lincke (2024); Farsi et al. (2025)"
   },
   {
     "objectID": "about.html#unit-3-operationalization-and-the-vector-space",
