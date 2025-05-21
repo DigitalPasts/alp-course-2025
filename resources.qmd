@@ -17,3 +17,7 @@ Berti, Monica, ed. (2019) *Digital Classical Philology: Ancient Greek and Latin 
 Carroll, S.R., Herczog, E., Hudson, M. et al. (2021) Operationalizing the CARE and FAIR Principles for Indigenous data futures. *Sci Data 8, 108*. <https://doi.org/10.1038/s41597-021-00892-0>
 
 For more see the designated course Zotero library still under construction: <https://www.zotero.org/groups/4809611/ancient_language_processing>
+
+### Technical and Code
+
+In ALP we explore how texts can be measurably compared to one another, and to do we turn texts into vectors. If you are interested in studying individual words, e.g. look at word vectors, look at the [following website](https://lena-voita.github.io/nlp_course/word_embeddings.html#pre_neural){target="_blank"}
