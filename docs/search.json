@@ -25,7 +25,7 @@
     "href": "about.html#unit-3-operationalization-and-the-vector-space",
     "title": "Schedule",
     "section": "Unit 3: Operationalization and the Vector Space",
-    "text": "Unit 3: Operationalization and the Vector Space\n\n\n\nDate\nTopic\nAssignment\nMaterials\n\n\n\n\n14/05/25\nNo Class\n\n\n\n\n21/05/25\nPipeline III: Operationalization of words I - the vector space\n\nJurafsky & Martin (2024); Riemenschneider (2025); Gordin et al. (2025)\n\n\n28/05/25\nPipeline IV: Operationalization of words II - measuring distances"
+    "text": "Unit 3: Operationalization and the Vector Space\n\n\n\nDate\nTopic\nAssignment\nMaterials\n\n\n\n\n14/05/25\nNo Class\n\n\n\n\n21/05/25\nPipeline III: Operationalization of words I - the vector space\n\nTutorials:\n\nPlaying with Neural Networks\n\nReading:\nRiemenschneider (2025); Gordin et al. (2025)\n\n\n28/05/25\nPipeline IV: Operationalization of words II - measuring distances\nProcess your data and measure distances: Data model using cuneiform data from ORACC with metadata can be found in the ALP 2024 course repository\nTutorials:\n\nCoding the past: understand TF-IDF in python\nProgramming Historian: analyzing documents with TF-IDF\nKarsdorp, Kestemont, & Riddell 2021\nLiterature connector: textual similarity notebook\n\nReading:\nGavin (2020); Bennett & Sahala (2023); Jurafsky & Martin (2024)"
   },
   {
     "objectID": "about.html#unit-4-network-analysis-and-visualization",
